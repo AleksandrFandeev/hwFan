@@ -1,6 +1,10 @@
 package org.itstep.task03;
 
 // @formatter:off
+
+import org.itstep.PaymentTypes;
+import org.itstep.task01.Employee;
+
 /**
  * Задание 3
  *
@@ -26,18 +30,18 @@ package org.itstep.task03;
 public class Main {
     public static void main(String[] args) {
         // FIXME: Раскомментируйте код
-//        Employee[] employees = {
-//                new EmployeeAndChild("Иванов", PaymentTypes.RATE, 3000, true),
-//                new EmployeeAndChild("Сидоров", PaymentTypes.HOURLY, 800, true),
-//                new EmployeeAndChild("Петров", PaymentTypes.JOB_PRICE, 5500)
-//        };
-//        System.out.println("  ФИО    |  Налог, % | Сумма (грн) | К оплате (грн)\n" +
-//                "---------|-----------|-------------|---------------");
-//        double sum = 0;
-//        for (Employee employee : employees) {
-//            System.out.println(employee);
-//            sum += employee.getPayment();
-//        }
-//        System.out.println(" Итого   |           |             | " + sum);
+        Employee[] employees = {
+                new EmployeeAndChild("Иванов", PaymentTypes.RATE, 3000, true),
+                new EmployeeAndChild("Сидоров", PaymentTypes.HOURLY, 800, true),
+                new EmployeeAndChild("Петров", PaymentTypes.JOB_PRICE, 5500)
+        };
+        System.out.println("  ФИО    |  Налог, % | Сумма (грн) | К оплате (грн)\n" +
+                "---------|-----------|-------------|---------------");
+        double sum = 0;
+        for (Employee employee : employees) {
+            System.out.println(employee);
+            sum += employee.getPaymentWithTax();
+        }
+        System.out.println(" Итого   |           |             | " + sum);
     }
 }

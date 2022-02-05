@@ -33,7 +33,7 @@ public class EmployeeAndTax extends Employee{
 
     @Override
     public String toString(){
-            return String.format("%-9s| %-10s | %.1f грн |%.1f грн",getFullName(),getTax(),getPayment(),getPaymentWithTax());
+            return String.format("%-9s| %-10s %% | %.1f грн |%.1f грн",getFullName(),getTax(),getPayment(),getPaymentWithTax());
     }
     @Override
     public double getPaymentWithTax(){
