@@ -4,11 +4,18 @@ public class Employee {
     private String fullName;
     private String paymentType;
     private double payment;
-
+    private double paymentWithTax;
     public Employee(String fullName, String paymentType, double payment) {
         this.fullName = fullName;
         this.paymentType = paymentType;
         this.payment = payment;
+    }
+
+    public double getPaymentWithTax() {
+        return paymentWithTax;
+    }
+    public void setPaymentWithTax(double paymentWithTax) {
+        this.paymentWithTax = paymentWithTax;
     }
 
     public String getFullName() {
